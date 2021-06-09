@@ -1,29 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Elanco Brand Page</title>
+</head>
+<body>
 <style>
-        
 	h1, h2, h3, h4, h5, h6, a, button {
 		font-family: "PetcoCircularTT-Bold", arial !important;
 	}
 	p {
 		font-family: "PetcoCircularTT-Regular", arial !important;
 	}
-	#mid-grid-template .container {
-		display: flex;
-		align-items: center;
-		height: 90px;
-		background: #00205B;
+	*{ margin : 0; padding : 0; }
+	img{ width : 100%; }
+
+	/* Elanco brand page */
+	.brand-page-section{
+		display: block;
 	}
-	#mid-grid-template .row {
+	.brand-page-section .flex-box{
 		display: flex;
-		align-items: center;
-	}
-	#mid-grid-template .col {
-		margin: 0.5rem 2%;
-		height: 74px;
-		display: flex;
+		flex-wrap: nowrap;
 		align-items: center;
 		justify-content: center;
 	}
-	.m-only {
+	.brand-page-section .container{
+		max-width: 1440px;
+	}
+	.brand-page-section .container-fluid{
+		width: 100%;
+	}
+	.brand-page-section .top-hero .headline{
+		font-family: "PetcoCircularTT-Bold", arial !important;
+		font-size: 25px;
+		color : #022169;
+		max-width: 300px;
+		text-align: center;
+		margin: 0 auto;
+	}
+	.brand-page-section .top-hero .col{
+		display:flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+	}
+	.brand-page-section__top-hero .headline{
+		font-size: 35px;
+		font-family: "PetcoCircularTT-Bold", arial !important;
+	}
+
+	.m-hide {
+		display: none;
+	}
+	.d-hide{
 		display: none;
 	}
 	@media screen and (min-width: 1025px) and (max-width: 1200px) {
@@ -32,7 +63,7 @@
 	@media screen and (min-width: 769px) and (max-width: 1024px) {
 
 	}
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 767px) {
 		#mid-grid-template .container {
 			height: 96px;
 		}
@@ -46,29 +77,48 @@
 	@media screen and (max-width: 480px) {
 
 	}
-
 </style>
-
-<div id="mid-grid-template">
-        
-	<div class="container">
-
-		<div class="row">
-
-			<div class="col">
-
+	<!-- *** Elanco brand page ***  -->
+	<div class="brand-page-section">
+		<!-- Top hero -->
+		<div class="brand-page-section container-fluid top-hero">
+			<div class="container flex-box">
+				<div class="col">
+					<div class="headline">PEST-IN-CLASS PROTECTION</div>
+					<div class="products-shots">
+						<img src="images/products-shots" alt="Golden retriever and cat. Seresto, Advantage 2 and K9 Advantix 2 treatment packages. Do not use K9 Advantix 2 on cats.">
+					</div>
+				</div>
+				<div class="col">
+					<div class="logo">
+						<img src="images/Elanco_logo_blue.png" />
+					</div>
+				</div>
+				
 			</div>
-
-			<div class="col">
-
-			</div>
-
-			<div class="col">
-
-			</div>
-
 		</div>
+		<!-- Flea & Tick treatments -->
+		<div class="brand-page-section container">
+			<div class="brand-page-section__flea-tick">
+				<div class="headline">Flea & tick treatments for pets</div>
+				<div class="content-wrapper">
+					<div class="content-wrapper__col">
 
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Flea & Tick treatments -->
+		<div class="brand-page-section container">
+			<div class="brand-page-section__flea-tick">
+				<div class="headline">Top picks to keep them pest-free</div>
+				<div class="content-wrapper">
+					<div class="content-wrapper__col">
+
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-
-</div>
+</body>
+</html>
