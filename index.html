@@ -21,19 +21,35 @@
 	.brand-page-section{
 		display: block;
 	}
-	.brand-page-section .flex-box{
-		display: flex;
-		flex-wrap: nowrap;
-		align-items: center;
-		justify-content: center;
-	}
 	.brand-page-section .container{
 		max-width: 1440px;
+		margin: 0 auto;
 	}
 	.brand-page-section .container-fluid{
 		width: 100%;
 	}
-	.brand-page-section .top-hero .headline{
+	.section-title{
+		color : #00205b;
+		font-family: "PetcoCircularTT-Bold", arial !important;
+		font-size: 25px;
+		padding : 46px 0 30px;
+		text-align: center;
+	}
+
+	/* Top Hero */
+	.brand-page-section__top-hero{
+		background-image: url("images/top-hero-lifestyle.jpg");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
+	.brand-page-section__top-hero--content{
+		display: flex;
+		align-items: flex-end;
+		justify-content: space-between;
+		flex-wrap: nowrap;
+	}
+	.brand-page-section__top-hero--content .headline{
 		font-family: "PetcoCircularTT-Bold", arial !important;
 		font-size: 25px;
 		color : #022169;
@@ -41,14 +57,111 @@
 		text-align: center;
 		margin: 0 auto;
 	}
-	.brand-page-section .top-hero .col{
+	.brand-page-section__top-hero--content .col{
 		display:flex;
 		flex-wrap: wrap;
 		flex-direction: column;
+		width : 50%;
+		padding: 36px 0;
 	}
-	.brand-page-section__top-hero .headline{
+	.brand-page-section__top-hero--content .col:first-child{
+		align-items: center;
+    	justify-content: center;
+	}
+	.brand-page-section__top-hero--content .col:last-child{
+		align-items: flex-end;
+		justify-content: flex-end;
+		padding: 36px 20px 20px 0;
+	}
+	.brand-page-section__top-hero--content .col:last-child .logo img{
+		max-width: 130px;
+	}
+	.brand-page-section__top-hero--content .headline{
 		font-size: 35px;
 		font-family: "PetcoCircularTT-Bold", arial !important;
+		text-align: center;
+	}
+
+	/* Flea & Tick treatments */
+	.brand-page-section__flea-tick{
+		display: block;
+	}
+	.brand-page-section__flea-tick--content .wrapper{
+		display: block;
+		overflow-y: auto;
+		margin: 0 auto;
+	}
+	.brand-page-section__flea-tick--content{
+		display: flex;
+		align-items: flex-start;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		padding : 20px 0;
+	}
+	.brand-page-section__flea-tick--content .col{
+		width: 50%;
+		display: flex;
+    	justify-content: center;
+	}
+	.brand-page-section__flea-tick--content .col .single-product{
+		padding : 15px;
+		text-align: center;
+		max-width: 250px;
+	}
+	.brand-page-section__flea-tick--content .col .single-product__img img{
+		max-width: 180px;
+	}
+	.brand-page-section__flea-tick--content .col .single-product__head{
+		font-family: "PetcoCircularTT-Bold", arial !important;
+		color : #000000;
+		font-size: 20px;
+		padding : 40px 0 20px;
+	}
+	.brand-page-section__flea-tick--content .col .single-product__subhead{
+		font-family: "PetcoCircularTT-Regular", arial !important;
+		color : #000000;
+		font-size: 16px;
+	}
+
+		/* Top picks to keep them pest-free */
+		.brand-page-section__top-picks{
+		display: block;
+	}
+	.brand-page-section__top-picks--content .wrapper{
+		display: block;
+		overflow-y: auto;
+	}
+	.brand-page-section__top-picks--content{
+		display: flex;
+		align-items: center;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		padding : 20px 0;
+		overflow-y: auto;
+	}
+	.brand-page-section__top-picks--content .col{
+		width: 50%;
+	}
+	.brand-page-section__top-picks--content .col .single-product{
+		padding : 15px;
+		text-align: center;
+		max-width: 250px;
+	}
+	.brand-page-section__top-picks--content .col .single-product__img img{
+		max-width: 250px;
+	}
+	.brand-page-section__top-picks--content .col .single-product__subhead{
+		font-family: "PetcoCircularTT-Regular", arial !important;
+		color : #000000;
+		font-size: 16px;
+		text-align: left;
+		padding : 40px 0 20px;
+	}
+	.brand-page-section__top-picks--content .col .single-product__cta{
+		font-family: "PetcoCircularTT-Bold", arial !important;
+		color : #000000;
+		font-size: 20px;
+		text-align: left;
 	}
 
 	.m-hide {
@@ -57,36 +170,72 @@
 	.d-hide{
 		display: none;
 	}
-	@media screen and (min-width: 1025px) and (max-width: 1200px) {
+	@media screen and (min-width: 1024px) and (max-width: 1200px) {
+		/* Top Hero */
+		.brand-page-section__top-hero--content .col{
+			padding: 36px;
+		}
 
 	}
-	@media screen and (min-width: 769px) and (max-width: 1024px) {
+	@media screen and (min-width: 769px) and (max-width: 1023px) {
 
 	}
 	@media screen and (max-width: 767px) {
-		#mid-grid-template .container {
-			height: 96px;
+		/* Top Hero */
+		.brand-page-section__top-hero{
+			background-image: url("images/top-hero-bg-mobile.jpg");
+			background-size: cover;
+			background-position: center;
 		}
-		.m-only {
+		.brand-page-section__top-hero--content{
 			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-wrap: wrap;
+			position: relative;
 		}
-		.d-only {
-			display: none !important;
+		.brand-page-section__top-hero--content .col{
+			width: 100%;
+			padding : 15px 0 0;
+		}
+		.brand-page-section__top-hero--content .col:last-child{
+			align-items: flex-end;
+			justify-content: flex-end;
+			padding: 36px 0 0;
+			position: absolute;
+			right: 0px;
+    		bottom: 0px;
+		}
+		.brand-page-section__top-hero--content .headline{
+			line-height: 37px;
+		}
+		.brand-page-section__top-hero--content .col:last-child .logo img{
+			max-width: 100px;
+		}
+		.brand-page-section__top-hero--content .col .products-shots{
+			padding: 250px 0 15px;
+			text-align: center;
 		}
 	}
 	@media screen and (max-width: 480px) {
-
+		/* Top Hero */
+		.brand-page-section__top-hero--content .col .products-shots{
+			padding: 210px 0 15px;
+		}
+		.brand-page-section__top-hero--content .col .products-shots img{
+			width: 90%;
+		}
 	}
 </style>
 	<!-- *** Elanco brand page ***  -->
 	<div class="brand-page-section">
 		<!-- Top hero -->
-		<div class="brand-page-section container-fluid top-hero">
-			<div class="container flex-box">
+		<div class="brand-page-section__top-hero container-fluid">
+			<div class="brand-page-section__top-hero--content container">
 				<div class="col">
 					<div class="headline">PEST-IN-CLASS PROTECTION</div>
 					<div class="products-shots">
-						<img src="images/products-shots" alt="Golden retriever and cat. Seresto, Advantage 2 and K9 Advantix 2 treatment packages. Do not use K9 Advantix 2 on cats.">
+						<img src="images/products-image.png" alt="Golden retriever and cat. Seresto, Advantage 2 and K9 Advantix 2 treatment packages. Do not use K9 Advantix 2 on cats.">
 					</div>
 				</div>
 				<div class="col">
@@ -100,21 +249,80 @@
 		<!-- Flea & Tick treatments -->
 		<div class="brand-page-section container">
 			<div class="brand-page-section__flea-tick">
-				<div class="headline">Flea & tick treatments for pets</div>
-				<div class="content-wrapper">
-					<div class="content-wrapper__col">
-
+				<div class="section-title">Flea & tick treatments for pets</div>
+				<div class="wrapper">
+					<div class="brand-page-section__flea-tick--content">
+						<div class="col">
+							<div class="single-product">
+								<div class="single-product__img">
+									<img src="images/treat.png" alt="First aid with paw print icon" />
+								</div>
+								<div class="single-product__head">Treat</div>
+								<div class="single-product__subhead">Kill pests that are already on your pet and in your home and yard.</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="single-product">
+								<div class="single-product__img">
+									<img src="images/prevent.png" alt="Shield with heart icon" />
+								</div>
+								<div class="single-product__head">Prevent</div>
+								<div class="single-product__subhead">Help stop infestations before they occur.</div>
+							</div>
+						</div>
+						<div class="col">
+							<div class="single-product">
+								<div class="single-product__img">
+									<img src="images/control.png" alt="Icon of cyclical arrows with a checkmark in the middle" />
+								</div>
+								<div class="single-product__head">Control</div>
+								<div class="single-product__subhead">Eliminate concerns about worms in your pet.</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- Flea & Tick treatments -->
+		<!-- Top picks to keep them pest-free -->
 		<div class="brand-page-section container">
-			<div class="brand-page-section__flea-tick">
-				<div class="headline">Top picks to keep them pest-free</div>
-				<div class="content-wrapper">
-					<div class="content-wrapper__col">
-
+			<div class="brand-page-section__top-picks">
+				<div class="section-title">Top picks to keep them pest-free</div>
+				<div class="brand-page-section__top-picks--content">
+					<div class="col">
+						<div class="single-product">
+							<div class="single-product__img">
+								<img src="images/product1.png" alt="First aid with paw print icon" />
+							</div>
+							<div class="single-product__subhead">Kill pests that are already on your pet and in your home and yard.</div>
+							<div class="single-product__cta">Shop Now</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="single-product">
+							<div class="single-product__img">
+								<img src="images/product2.png" alt="First aid with paw print icon" />
+							</div>
+							<div class="single-product__subhead">Kill pests that are already on your pet and in your home and yard.</div>
+							<div class="single-product__cta">Shop Now</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="single-product">
+							<div class="single-product__img">
+								<img src="images/product3.png" alt="First aid with paw print icon" />
+							</div>
+							<div class="single-product__subhead">Kill pests that are already on your pet and in your home and yard.</div>
+							<div class="single-product__cta">Shop Now</div>
+						</div>
+					</div>
+					<div class="col">
+						<div class="single-product">
+							<div class="single-product__img">
+								<img src="images/product4.png" alt="First aid with paw print icon" />
+							</div>
+							<div class="single-product__subhead">Kill pests that are already on your pet and in your home and yard.</div>
+							<div class="single-product__cta">Shop Now</div>
+						</div>
 					</div>
 				</div>
 			</div>
